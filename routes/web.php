@@ -14,8 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Home');
 });
 
-Route::get('/','CompanyController@index')->name('company.index');
+/*---------- Company Route ----------*/
+Route::get('/','CompanyController@index')->name('company.home');
+Route::get('/company/create', 'CompanyController@create')->name('company.create');
+Route::post('/company','CompanyController@store')->name('company.store');
+Route::post('/company/delete/{id}', 'CompanyController@destroy')->name('company.destroy');
+Route::get('/company/edit/{id}', 'CompanyController@edit')->name('company.edit');
+Route::post('/company/update/{id}', 'CompanyController@update')->name('company.update');
 
+/*---------- PIC Route ----------*/
+Route::get('/','PicController@index')->name('PIC.index');
+Route::get('/PIC/create', 'PicController@create')->name('PIC.create');
+Route::post('/PIC','PicController@store')->name('PIC.store');
+Route::post('/PIC/delete/{id}', 'PicController@destroy')->name('PIC.destroy');
+Route::get('/PIC/edit/{id}', 'PicController@edit')->name('PIC.edit');
+Route::post('/PIC/update/{id}', 'PicController@update')->name('PIC.update');

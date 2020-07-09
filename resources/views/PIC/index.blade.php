@@ -3,9 +3,9 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4>Data Company</h4>
-            <a href="{{ route('company.create') }}" class="btn btn-primary" style="float: right">
-            <i class="fa fa-plus"></i> Add Company</a>
+            <h4>Data PIC</h4>
+            <a href="{{ route('PIC.create') }}" class="btn btn-primary" style="float: right">
+            <i class="fa fa-plus"></i> Add PIC</a>
         </div>
         <div class="card-body">
             @if (Session::has('pesan'))
@@ -15,10 +15,10 @@
                 <thead class="thead thead-light">
                     <tr>
                         <th>No</th>
-                        <th>Company Name</th>
+                        <th>PIC Name</th>
+                        <th>Email Address</th>
                         <th>Phone Number</th>
                         <th>Address</th>
-                        <th>Logo</th>
                         <th>PIC</th>
                         <th>Action</th>
                     </tr>

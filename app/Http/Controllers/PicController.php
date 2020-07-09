@@ -2,13 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use File;
-use App\Company;
-use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
-
-class CompanyController extends Controller
+class PicController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,8 +14,8 @@ class CompanyController extends Controller
     public function index()
     {
         // $no = 0;
-        // $company = Company::all();
-        return view('Companys.index');
+        // $pic = Pic::all();
+        return view('PIC.index');
     }
 
     /**
@@ -29,7 +25,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        return view('Companys.create');
+        return view('PIC.create');
     }
 
     /**

@@ -40,7 +40,25 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name_company'      => 'required',
+            'phone'             => 'required',
+            'address'           => 'required',
+            'logo'              => 'required|image|mimes:jpeg,jpg,png',
+        ]);
+
+        $company  = New Company;
+        $company->name_company = $request->name_company;
+        $company->name_company = $request->name_company;
+        $company->name_company = $request->name_company;
+
+        $logo = $request->logo;
+        $namafile = time().'.'.$logo->getClientOriginalExtension();
+        $logo->move('images/',$namafile);
+
+        $company->logo = $namafile;
+        $company->save();
+        return redirect('/Company/Home')->with('pesan','Data Company has been Added');
     }
 
     /**

@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 /*---------- Company Route ----------*/
-Route::get('/','CompanyController@index')->name('company.home');
+Route::get('/Company/Home','CompanyController@index')->name('company.index');
 Route::get('/company/create', 'CompanyController@create')->name('company.create');
 Route::post('/company','CompanyController@store')->name('company.store');
 Route::post('/company/delete/{id}', 'CompanyController@destroy')->name('company.destroy');
@@ -26,7 +26,7 @@ Route::get('/company/edit/{id}', 'CompanyController@edit')->name('company.edit')
 Route::post('/company/update/{id}', 'CompanyController@update')->name('company.update');
 
 /*---------- PIC Route ----------*/
-Route::get('/','PicController@index')->name('PIC.index');
+Route::get('/PIC/Home','PicController@index')->name('PIC.index');
 Route::get('/PIC/create', 'PicController@create')->name('PIC.create');
 Route::post('/PIC','PicController@store')->name('PIC.store');
 Route::post('/PIC/delete/{id}', 'PicController@destroy')->name('PIC.destroy');

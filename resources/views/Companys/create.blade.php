@@ -27,10 +27,10 @@
                     <label for="address"> Company Address </label>
                     <input type="text" class="form-control" name="address">
                 </div>
-                <div class="form-group">
+                {{-- <div class="form-group">
                     <label for="pic"> PIC </label>
                     <input type="text" class="form-control" name="pic">
-                </div>
+                </div> --}}
                 <div class="form-group">
                     <label for="logo"> Upload Logo </label>
                     <input type="file" class="form-control" name="logo">
